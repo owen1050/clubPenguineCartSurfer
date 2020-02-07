@@ -36,19 +36,28 @@ while True:
 		pyautogui.click(x=1200, y=370) 
 		time.sleep(0.05)
 		pyautogui.click(x=1200, y=370) 
+		lastTime = time.time()
 		while(False == pyautogui.pixelMatchesColor(1271, 848, (120, 149, 187))):
+			if(time.time() - lastTime > 6):
+				break
 			time.sleep(0.1)
 		time.sleep(0.5)
 		pyautogui.click(x=1400, y=450) 
 		time.sleep(0.01)
 		pyautogui.click(x=1400, y=450) 
+		lastTime = time.time()
 		while(False == pyautogui.pixelMatchesColor(750, 525, (2, 128, 205))):
+			if(time.time() - lastTime > 6):
+				break
 			time.sleep(0.1)
 		time.sleep(0.5)
 		pyautogui.click(x=860, y=622) 
 		time.sleep(0.01)
 		pyautogui.click(x=860, y=622) 
+		lastTime = time.time()
 		while(False == pyautogui.pixelMatchesColor(809, 1021, (87, 30, 0))):
+			if(time.time() - lastTime > 6):
+				break
 			time.sleep(0.1)
 		time.sleep(0.5)
 		pyautogui.click(x=1289, y=617) 
